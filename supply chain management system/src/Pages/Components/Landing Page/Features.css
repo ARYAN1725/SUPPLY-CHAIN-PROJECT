@@ -1,0 +1,82 @@
+.container{   /* Need to begin for here */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#EcoFriendly{
+    border: 2px solid black;
+    border-radius: 7px;
+    max-width: 220px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 3px 3px 3px;
+    background-image: url(/green.jpeg);
+    height: 300px;
+}
+
+#EcoPara, #EcoHeader,#EcoButton{
+    margin: 20px;
+    padding: 3px;
+}
+
+#EcoButton{
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(55, 211, 211);
+    color: white;
+    cursor: pointer;
+}
+
+#SpeedyService{
+    border: 2px solid black;
+    border-radius: 7px;
+    max-width: 220px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 3px 3px 3px;
+    background-image: url(/pink.jpeg);
+    height: 300px;
+}
+
+#SpeedyPara, #SpeedyHeader, #SpeedyButton{
+    margin: 20px;
+    padding: 3px;
+}
+
+#SpeedyButton{
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(119, 114, 224);
+    color: white;
+    cursor: pointer;
+}
+
+#OrderAndShipmentTracking{
+    border: 2px solid black;
+    border-radius: 7px;
+    max-width: 220px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 3px 3px 3px;
+    background-image: url(/blue.jpeg);
+    height: 300px;
+}
+
+#OrderPara, #OrderHeader, #OrderButton{
+    margin: 20px;
+    padding: 3px;
+}
+
+#OrderButton{
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(233, 81, 81);
+    color: white;
+    cursor: pointer;
+}
