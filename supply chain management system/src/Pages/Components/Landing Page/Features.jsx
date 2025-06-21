@@ -1,5 +1,4 @@
-//The features in the homepage include Card Components
-// import BlueBackground from './assets/blue.jpeg';
+
 import './Features.css'
 
 function Features(){

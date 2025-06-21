@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    /* position: fixed; */
     width: 95%;
 }
 
@@ -10,7 +10,7 @@
     list-style-type: none;
     background-color: black;
     padding: 15px;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
     max-width: fit-content;
 }
@@ -40,7 +40,7 @@
     margin-right: 5px;
     margin-left: 5px;
     padding: 12px;
-    width: 80px;
+    width: 100px;
     color: black;
     background-color: white;
 }
@@ -50,11 +50,26 @@
     text-decoration: underline;
 }
 
+#SignupButton{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 12px;
+    width: 100px;
+    color: black;
+    background-color: white;
+}
+
+#SignupButton:hover{
+    background-color: hsl(185, 56%, 53%);
+    text-decoration: underline;
+}
+
 .header-image{
     display: grid;
     grid-template-columns: auto;
     align-items: center;
     padding: 20px 40px;
+    border-radius: 50%;
 }
 
 #Logo{

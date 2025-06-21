@@ -1,16 +1,19 @@
 import Header from './Components/Landing Page/Header';
 import Features from './Components/Landing Page/Features';
-
+import Hero from './Components/Landing Page/Hero';
 
 const LandingPage = () => {
   return (
     <>
-    <div className="Navbar">
+   
     <Header></Header>
+
+    <div className="Hero">
+      <Hero></Hero>
     </div>
-    <div className="Features">
+    
     <Features></Features>
-    </div>
+   
     </>
   );
 }
