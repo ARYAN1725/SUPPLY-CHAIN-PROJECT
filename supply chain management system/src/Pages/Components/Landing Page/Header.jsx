@@ -4,9 +4,10 @@ function Header(){
 
     return(
         <header>
-            <nav className="navbar">
+                <div className="EntireNavbar">
                 <div className="header-image">
                 <img src="/Logo.jpg" id="Logo" />
+                </div>
                 <ul>
                 <li><a href="#" id="HomeElement">Home</a></li>
                 <li><a href="#">About Us</a></li>
@@ -14,8 +15,8 @@ function Header(){
                 <li><a href="#">Ship Now</a></li>
                 <button id="LoginButton">LOGIN</button>
                 </ul>
-                </div>
-            </nav>
+                </div>    
+                       
         </header>
     );
 }

@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import Header from './Pages/Components/Landing Page/Header';
-import Features from './Pages/Components/Landing Page/Features';
+import LandingPage from './Pages/LandingPage';
 import './App.css'
 
 function App() {
@@ -8,11 +7,9 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <br /><br />
-      <Features></Features>
+      <LandingPage></LandingPage>
     </>
-  )
+  );
 }
 
 export default App

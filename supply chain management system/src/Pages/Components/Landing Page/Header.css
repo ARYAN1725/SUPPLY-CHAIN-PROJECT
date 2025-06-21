@@ -1,17 +1,21 @@
-.navbar ul{
+.EntireNavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 95%;
+}
+
+.EntireNavbar ul{
     list-style-type: none;
     background-color: black;
     padding: 15px;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     max-width: fit-content;
-    justify-self: end;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
-.navbar a{
+.EntireNavbar a{
     color: white;
     text-decoration: none;
     display: block;
@@ -19,7 +23,7 @@
     text-align: center;
 }
 
-.navbar a:hover{
+.EntireNavbar a:hover{
     background-color: hsl(185, 56%, 53%);
     text-decoration: underline;
 }
@@ -28,7 +32,7 @@
     margin-left: 0px;
 }
 
-.navbar li{
+.EntireNavbar li{
     float: right;
 }
 
