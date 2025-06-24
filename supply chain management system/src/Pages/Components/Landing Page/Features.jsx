@@ -5,6 +5,11 @@ function Features(){
     return(
         <>
         <div className="Features">
+            <div id="aboutInfo">
+                <h3 id="infoHeader">LOREM IPSUM DOLOR</h3>
+                <p id="infoPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque iusto deserunt at rem aliquam fuga quas amet facilis, reprehenderit, esse nulla officia fugit debitis vitae repellendus eos voluptate nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolorem, distinctio amet sapiente iste non.</p>
+            </div>
+        
             <div id="EcoFriendly">
                 <h3 id="EcoHeader">ECO FRIENDLY SHIPPING</h3>
                 <p id="EcoPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate hic omnis placeat voluptatem est architecto</p>

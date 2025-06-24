@@ -6,6 +6,19 @@
     padding-top: 50px;
 }
 
+#aboutInfo{
+        border: 2px solid black;
+        border-radius: 7px;
+        max-width: 220px;
+        padding: 20px;
+        margin: 15px;
+        text-align: center;
+        display: inline-block;
+        box-shadow: 3px 3px 3px;
+        height: 300px;
+        font-size: 1.08em;
+}
+
 #EcoFriendly{
     border: 2px solid black;
     border-radius: 7px;
