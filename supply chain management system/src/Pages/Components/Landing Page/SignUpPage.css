@@ -1,0 +1,158 @@
+.Wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.EntireForm{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LoginImage{
+    height: 250px;
+    width: 500px;
+}
+
+#FormHeader{
+    margin-bottom: 8px;
+}
+
+#FormHeader + #WelcomeBack{
+    margin-top: 0;
+}
+
+.FormInputs{
+    padding-top: 10px;
+}
+
+#Username{
+    width: 350px;
+    height: 2.5em;
+    background-color: rgb(29, 28, 28);
+    border-radius: 7px;
+    color: white;
+}
+
+label[for="Username"]{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#UsernameSVG:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+#Email{
+    width: 350px;
+    height: 2.5em;
+    background-color: rgb(29, 28, 28);
+    border-radius: 7px;
+    color: white;
+}
+
+label[for="Email"]{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#EmailSVG:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+#Password{
+    width: 350px;
+    height: 2.5em;
+    background-color: rgb(29, 28, 28);
+    border-radius: 7px;
+    color: white;
+}
+
+label[for="Password"]{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#PasswordSVG{
+    width: 60px;
+    height: 60px;
+}
+
+#PasswordSVG:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.EntireForm{
+    display: flex;
+    justify-content: center;
+}
+
+.TitleSubtitle{
+    text-align: center;
+}
+
+.RememberForgot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.LeftRemember{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+#ForgotPassword{
+    text-decoration: none;
+    font-weight: 1.5px;
+}
+
+#LoginFormButton{
+    width: 350px;
+    height: 2.5em;
+    color: white;
+    background-color: hsl(224, 73%, 42%);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+#LoginFormButton:hover{
+    background-color: hsl(180, 55%, 52%);
+}
+
+.SignUpPara a{
+    text-decoration: none;
+}
+
+.RightSide{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(224, 73%, 42%);
+    height: 100%;
+    color: white;
+}
+
+.RightSideText{
+    padding: 15px;
+    text-align: center;
+}

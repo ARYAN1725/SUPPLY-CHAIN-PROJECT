@@ -1,7 +1,8 @@
 import './Header.css';
+import { useNavigate } from 'react-router-dom';
 
 function Header(){
-
+    const navigate = useNavigate();
     return(
         <header>
                 <div className="EntireNavbar">
@@ -18,8 +19,8 @@ function Header(){
                 </ul>
                 </div>
                 <div className="buttons">
-                <button id="LoginButton">LOGIN</button>
-                <button id="SignupButton">SIGN UP</button>
+                <button id="LoginButton" onClick={() => navigate('/login')}>LOGIN</button>
+                <button id="SignupButton" onClick={() => navigate('/signup')}>SIGN UP</button>
                 </div>
                 </div>    
                        

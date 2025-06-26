@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import LandingPage from './Pages/LandingPage';
+import LoginPage from './Pages/LoginPage';
+import SignUpPage from './Pages/SignUpPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 
 function App() {
@@ -7,7 +10,13 @@ function App() {
 
   return (
     <>
-      <LandingPage></LandingPage>
+      <Router>
+        <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} /> 
+        </Routes>
+      </Router>
     </>
   );
 }
