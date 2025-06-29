@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 function Header(){
     const navigate = useNavigate();
     return(
-        <header>
-                <div className="EntireNavbar">
-                <div className="header-image">
+        <>
+        <div className="wrapper">
+        <div className="header-image">
                 <img src="/Logo.jpg" id="Logo" />
                 </div>
-                
+
+                <div className="EntireNavbar">
                 <div className="centerNavbar">
                 <ul>
                 <li><a href="#" id="HomeElement">Home</a></li>
@@ -26,7 +27,8 @@ function Header(){
                 </div>
                 </div>    
                        
-        </header>
+        </div>
+        </>
     );
 }
 
