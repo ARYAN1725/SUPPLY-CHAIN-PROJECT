@@ -1,5 +1,7 @@
 import './Header.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 function Header(){
     const navigate = useNavigate();
@@ -13,7 +15,7 @@ function Header(){
                 <div className="centerNavbar">
                 <ul>
                 <li><a href="#" id="HomeElement">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><Link to="/about" id="AboutUsElement">About Us</Link></li>
                 <li><a href="#">Orders</a></li>
                 <li><a href="#">Ship Now</a></li>
                 </ul>
