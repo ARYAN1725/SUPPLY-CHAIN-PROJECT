@@ -1,0 +1,214 @@
+.Image{
+    background-image: url("/DeliveryTruckResized.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.ImageText{
+    color: white;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.ImageText p{
+    font-weight: bold;
+}
+
+.UpperHalfForm{
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.UpperHalfForm h2{
+    text-align: center;
+}
+
+#SenderName, #ReceiverName{
+    width: 300px;
+    background-color: black;
+    color: white;
+    height: 2.5em;
+}
+
+.Name label{
+    font-size: 1.4em;
+}
+
+.RecName label{
+    font-size: 1.4em;
+}
+
+.Name, .RecName{
+    margin-bottom: 1em;
+}
+
+#SenderAddress1, #SenderAddress2, #ReceiverAddress1, #ReceiverAddress2{
+    width: 450px;
+    background-color: black;
+    color: white;
+    height: 2.5em;
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.AddressLabel{
+    font-size: 1.4em;
+}
+
+.StateLabel{
+    font-size: 1.4em;
+}
+
+#SenderState, #ReceiverState{
+    width: 250px;
+    background-color: black;
+    color: white;
+    height: 2.5em;
+}
+
+.StateDiv, .RecStateDiv{
+    margin-bottom: 1em;
+}
+
+.AddressDiv, .RecAddressDiv{
+    margin-bottom: 1em;
+}
+
+.CityLabel{
+    font-size: 1.4em;
+}
+
+#SenderCity, #ReceiverCity{
+    width: 250px;
+    background-color: black;
+    color: white;
+    height: 2.5em;
+}
+
+.CityDiv, .RecCityDiv{
+    margin-bottom: 1em;
+}
+
+.PincodeLabel{
+    font-size: 1.4em;
+}
+
+#SenderPincode, #RecPincode{
+    width: 250px;
+    background-color: black;
+    color: white;
+    height: 2.5em;
+}
+
+.PinCodeDiv, .RecPinCodeDiv{
+    margin-bottom: 1em;
+}
+
+#SenderButton, #ReceiverButton{
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 2.5em;
+    margin-bottom: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LowerHalfForm{
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.LowerHalfForm h2{
+    text-align: center;
+}
+
+.WeightLabel, .UnitLabel, .CheckboxLabel, .LengthLabel, .WidthLabel, .HeightLabel, .DescriptionLabel{
+    font-size: 1.4em;
+}
+
+#PackageWeight, #PackageUnit{
+    width: 150px;
+    background-color: black;
+    color: white;
+    height: 2.5em;
+}
+
+.PkgWeight, .PkgUnit{
+    margin-bottom: 1em;
+}
+
+.DescriptionLabel{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#PackageContent{
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    color: white;
+}
+
+.PkgContents, .checkbox, .PackageDimensions{
+    margin-bottom: 1em;
+}
+
+#PackageLength, #PackageWidth, #PackageHeight{
+    width: 150px;
+    height: 2.5em;
+    background-color: black;
+    color: white;
+    padding-right: 20px;
+}
+
+.WidthLabel, .HeightLabel{
+    padding-left: 20px;
+}
+
+#PackageDetailsButton{
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 2.5em;
+    margin-bottom: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.DateLabel{
+    font-size: 1.4em;
+}
+
+#ShippingDate{
+    width: 150px;
+    height: 2.5em;
+    margin-bottom: 1em;
+    padding-right: 20px;
+    /* background-color: black; */
+    /* color: white; */
+}
+
+#ShippingDateButton{
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 2.5em;
+    margin-bottom: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

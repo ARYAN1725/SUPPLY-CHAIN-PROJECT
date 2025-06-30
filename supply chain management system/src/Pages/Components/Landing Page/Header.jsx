@@ -15,10 +15,10 @@ function Header(){
                 <div className="EntireNavbar">
                 <div className="centerNavbar">
                 <ul>
-                <li><a href="#" id="HomeElement">Home</a></li>
+                <li><a href="/home" id="HomeElement">Home</a></li>
                 <li><Link to="/about" id="AboutUsElement">About Us</Link></li>
                 <li><Link to="/orders" id="OrdersPageElement">Orders</Link></li>
-                <li><a href="#">Ship Now</a></li>
+                <li><Link to="/shipnow" id="ShipNowPageElement">Ship Now</Link></li>
                 </ul>
                 </div>
                 <div className="buttons">
