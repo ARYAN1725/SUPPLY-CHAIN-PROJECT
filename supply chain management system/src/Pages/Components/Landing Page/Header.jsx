@@ -17,7 +17,7 @@ function Header(){
                 <ul>
                 <li><a href="#" id="HomeElement">Home</a></li>
                 <li><Link to="/about" id="AboutUsElement">About Us</Link></li>
-                <li><a href="#">Orders</a></li>
+                <li><Link to="/orders" id="OrdersPageElement">Orders</Link></li>
                 <li><a href="#">Ship Now</a></li>
                 </ul>
                 </div>

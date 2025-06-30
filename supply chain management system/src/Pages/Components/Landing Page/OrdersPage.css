@@ -1,0 +1,76 @@
+.Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Ensures proper height minus header/footer space */
+    padding: 40px 20px; /* Added: padding to prevent overlap with header/footer */
+    box-sizing: border-box; /* Added: includes padding in total width/height */
+}
+
+.Image{
+    background-image: linear-gradient(hsla(0, 2%, 22%, 0.5), hsla(0, 1%, 22%, 0.5)), url("/ResizedParcelReceiving.png");
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+.TextImage{
+    color: white;
+    font-weight: bold;
+}
+
+.TextImage input{
+    width: 200px;
+    height: 1.7em;
+    color: black;
+}
+
+.TextImage button{
+    width: 100px;
+    height: 1.7em;
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.FeaturesSVG img{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.FeaturesSVG{
+    display: flex;
+    /* align-items: center; */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.FeaturesSVG > div{
+    flex: 1;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.FeaturesSVG{
+    text-align: justify;
+}
+
+
+
+
