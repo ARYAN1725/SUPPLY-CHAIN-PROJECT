@@ -103,9 +103,12 @@ function ShipNow(){
 
         <div className="LowerHalfForm">
             <div className="PackageDetails">
-                
-                <div className="PkgWeight">
+
                     <h2>Package Details</h2>
+
+                    <div className="PkgWeightUnit">
+                        
+                    <div className="PkgWeight">
                 <label htmlFor="Weight" class="WeightLabel">Weight: </label>
                 <input type="text" id="PackageWeight"/>
                 </div>
@@ -113,6 +116,7 @@ function ShipNow(){
                 <div className="PkgUnit">
                 <label htmlFor="Unit" class="UnitLabel">Unit: </label>
                 <input type="text" id="PackageUnit"/>
+                </div>
                 </div>
 
                 <div className="PkgContents">

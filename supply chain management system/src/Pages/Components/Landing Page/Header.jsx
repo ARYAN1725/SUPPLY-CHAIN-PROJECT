@@ -15,7 +15,7 @@ function Header(){
                 <div className="EntireNavbar">
                 <div className="centerNavbar">
                 <ul>
-                <li><a href="/home" id="HomeElement">Home</a></li>
+                <li><Link to="/home" id="Home Element">Home</Link></li>
                 <li><Link to="/about" id="AboutUsElement">About Us</Link></li>
                 <li><Link to="/orders" id="OrdersPageElement">Orders</Link></li>
                 <li><Link to="/shipnow" id="ShipNowPageElement">Ship Now</Link></li>

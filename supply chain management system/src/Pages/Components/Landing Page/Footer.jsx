@@ -7,10 +7,10 @@ function Footer(){
 
             <div className="UsefulLinksColumn">
                 <h2>USEFUL LINKS</h2>
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Orders</a>
-                <a href="#">Shipment</a>
+                <a href="/home">Home</a>
+                <a href="/about">About Us</a>
+                <a href="/orders">Orders</a>
+                <a href="/shipnow">Shipment</a>
             </div>
 
             <div className="EmailFormColumn">
