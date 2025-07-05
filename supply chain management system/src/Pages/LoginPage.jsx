@@ -2,8 +2,23 @@ import './Components/Landing Page/LoginPage.css';
 import Header from './Components/Landing Page/Header';
 import Footer from './Components/Landing Page/Footer';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Login(){
+const Login = () =>{
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const { name, value} = e.target;
+        setFormDate(prev => ({
+            ...prev,
+            [name] : value
+        }));
+    }
 
     return(
         <>
@@ -22,7 +37,12 @@ function Login(){
             <img src="/Email.svg" style={{width: '20px', height: '20px'}} id="EmailSVG"/>
             <label htmlFor="Email">Email</label>
             <br />
-            <input type="text" id="Email" placeholder='Example: abc@example.com' />
+            <input 
+            type="text" 
+            id="Email" 
+            placeholder='Example: abc@example.com' 
+            name="email"
+            />
             <br /><br />
             </div>
 
@@ -30,7 +50,11 @@ function Login(){
             <img src="Password.svg" style={{width: '20px', height: '20px'}} id="PasswordSVG"/>
             <label htmlFor="Password">Password</label>
             <br />
-            <input type="password" id="Password" placeholder='Enter your password' />
+            <input type="password" 
+            id="Password" 
+            placeholder='Enter your password' 
+            name="password"
+            />
             </div>
             </div>
 
