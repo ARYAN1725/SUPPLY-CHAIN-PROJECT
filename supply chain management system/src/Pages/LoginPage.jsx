@@ -1,25 +1,28 @@
 import './Components/Landing Page/LoginPage.css';
 import Header from './Components/Landing Page/Header';
+import Footer from './Components/Landing Page/Footer';
+import { useState } from 'react';
 
 function Login(){
+
     return(
         <>
         <Header></Header>
         <div className="Wrapper">
         <div className="EntireForm">
-        <form action="">
+        <form>
 
             <div className="TitleSubtitle">
             <h2 id="FormHeader">Lorem ipsum</h2>
             <p id="WelcomeBack">Welcome back! Please login to contiune</p>
             </div>
 
-            <div className="FormInputs">
+            <div className="FormInputs" >
             <div id="EmailSection">
             <img src="/Email.svg" style={{width: '20px', height: '20px'}} id="EmailSVG"/>
             <label htmlFor="Email">Email</label>
             <br />
-            <input type="text" id="Email" placeholder='Example: abc@example.com'/>
+            <input type="text" id="Email" placeholder='Example: abc@example.com' />
             <br /><br />
             </div>
 
@@ -27,7 +30,7 @@ function Login(){
             <img src="Password.svg" style={{width: '20px', height: '20px'}} id="PasswordSVG"/>
             <label htmlFor="Password">Password</label>
             <br />
-            <input type="password" id="Password" placeholder='Enter your password'/>
+            <input type="password" id="Password" placeholder='Enter your password' />
             </div>
             </div>
 
@@ -40,7 +43,7 @@ function Login(){
             <br /><br />
             </div>
             
-            <button id="LoginFormButton">LOGIN</button>
+            <button type="submit" id="LoginFormButton">LOGIN</button>
 
             <div className="SignUpPara">
             <p id="SignUp">Don't have an account? <a href="#" id="SignUp">Sign up</a> </p>
@@ -64,6 +67,8 @@ function Login(){
             </div>
         </div>
         </div>
+
+        <Footer></Footer>
         </>
     );
 }

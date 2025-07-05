@@ -1,5 +1,6 @@
 import './Components/Landing Page/SignUpPage.css';
 import Header from './Components/Landing Page/Header';
+import Footer from './Components/Landing Page/Footer';
 
 function Signup(){
     return(
@@ -73,6 +74,8 @@ function Signup(){
             </div>
         </div>
         </div>
+
+        <Footer></Footer>
         </>
     );
 }
