@@ -1,14 +1,46 @@
 import './Components/Landing Page/SignUpPage.css';
 import Header from './Components/Landing Page/Header';
 import Footer from './Components/Landing Page/Footer';
+import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom';
+import API from '../api';
 
-function Signup(){
+const Signup = () => {
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        password: '',
+    });
+
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async(e) => {
+        e.preventDefault();
+        try{
+            await API.post('/api/UserSignup', formData);
+            alert('Registration Successful');
+            navigate('/login');
+        }
+        catch(error) {
+            alert('An error occured');
+            console.log(error);
+        }
+    };
+
     return(
         <>
         <Header></Header>
         <div className="Wrapper">
         <div className="EntireForm">
-        <form action="">
+        <form onSubmit={handleSubmit}>
 
             <div className="TitleSubtitle">
             <h2 id="FormHeader">Lorem ipsum</h2>
@@ -21,7 +53,15 @@ function Signup(){
             <img src="/Username.svg" id="UsernameSVG" style={{width: '20px', height: '20px'}}/>
             <label htmlFor="Username" id="Username">Username</label>
             <br />
-            <input type="text" id="Username" placeholder='Choose any username...'/>
+            <input 
+            type="text" 
+            id="Username" 
+            placeholder='Choose any username...'
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+            />
             <br /><br />
             </div>
 
@@ -29,7 +69,15 @@ function Signup(){
             <img src="/Email.svg" style={{width: '20px', height: '20px'}} id="EmailSVG"/>
             <label htmlFor="Email">Email</label>
             <br />
-            <input type="text" id="Email" placeholder='Example: abc@example.com'/>
+            <input 
+            type="text" 
+            id="Email" 
+            placeholder='Example: abc@example.com'
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            />
             <br /><br />
             </div>
 
@@ -37,7 +85,15 @@ function Signup(){
             <img src="Password.svg" style={{width: '20px', height: '20px'}} id="PasswordSVG"/>
             <label htmlFor="Password">Password</label>
             <br />
-            <input type="password" id="Password" placeholder='Enter your password'/>
+            <input
+            type="password" 
+            id="Password" 
+            placeholder='Enter your password'
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+            />
             </div>
             </div>
 

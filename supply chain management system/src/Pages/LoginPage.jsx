@@ -3,6 +3,7 @@ import Header from './Components/Landing Page/Header';
 import Footer from './Components/Landing Page/Footer';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import API from '../api';
 
 const Login = () =>{
     const [formData, setFormData] = useState({
@@ -14,18 +15,42 @@ const Login = () =>{
 
     const handleChange = (e) => {
         const { name, value} = e.target;
-        setFormDate(prev => ({
+        setFormData(prev => ({
             ...prev,
             [name] : value
         }));
     }
+
+    const handleSubmit = async(e) => {
+        e.preventDefault();
+
+        try{
+            const response = await API.post('/api/UserLogin',
+                formData, {withCredentials: true}
+            );
+
+            if (response.data.username){
+                sessionStorage.setItem('username', response.data.username);
+                alert(`Welcome, ${response.data.username}!`);
+                navigate('/home');
+            }
+            else{
+                alert('Invalid email or password');
+                console.log(response);
+            }
+        }
+        catch (error){
+            alert('An error occurred');
+            console.log(error);
+        }
+    };
 
     return(
         <>
         <Header></Header>
         <div className="Wrapper">
         <div className="EntireForm">
-        <form>
+        <form onSubmit={handleSubmit}>
 
             <div className="TitleSubtitle">
             <h2 id="FormHeader">Lorem ipsum</h2>
@@ -41,7 +66,10 @@ const Login = () =>{
             type="text" 
             id="Email" 
             placeholder='Example: abc@example.com' 
+            value={formData.email}
+            onChange={handleChange}
             name="email"
+            required
             />
             <br /><br />
             </div>
@@ -53,7 +81,10 @@ const Login = () =>{
             <input type="password" 
             id="Password" 
             placeholder='Enter your password' 
+            value={formData.password}
+            onChange={handleChange}
             name="password"
+            required
             />
             </div>
             </div>

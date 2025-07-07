@@ -34,13 +34,13 @@ function Footer(){
 
             <div className="profileLinks">
             <a href="">
-            <img src="/Instagram.svg" alt="" class="profileIcons" />
+            <img src="/Instagram.svg" alt="" className="profileIcons" />
             </a>
             <a href="https://x.com/aryanpatil1725">
-            <img src="/Twitter.svg" alt="" class="profileIcons"/>
+            <img src="/Twitter.svg" alt="" className="profileIcons"/>
             </a>
             <a href="https://www.linkedin.com/in/aryan-patil-62571b356/">
-            <img src="/Linkedin.svg" alt="" class="profileIcons"/>
+            <img src="/Linkedin.svg" alt="" className="profileIcons"/>
             </a>
             </div>
             </div>
