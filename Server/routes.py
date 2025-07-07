@@ -1,5 +1,6 @@
 from flask import request, jsonify, session, send_file
 from app import app
+from models import *
 
 #User Login API endpoint
 @app.route("/api/UserLogin", methods=["POST"])
@@ -8,8 +9,10 @@ def UserLogin():
     email = data.get("email")
     password = data.get('password')
 
-    if email == 'abc@gmail.com' and password == '1234':
-        return jsonify({"username": "AryanPatil"})
+    user = User.query.filter_by(email=email, password=password).first()
+
+    if user:
+        return jsonify({"username": user.username})
     else:
         return jsonify({"username": None})
 
@@ -17,9 +20,14 @@ def UserLogin():
 @app.route("/api/UserSignup", methods=["POST"])
 def UserSignup():
     data = request.get_json()
-    username = data.get("username")
-    email = data.get("email")
-    password = data.get("password")
+
+    new_user = User(
+    username = data.get("username"),
+    email = data.get("email"),
+    password = data.get("password"),
+    )
+    db.session.add(new_user)
+    db.session.commit()
 
     return jsonify({"message": "Registration successful!"})
     

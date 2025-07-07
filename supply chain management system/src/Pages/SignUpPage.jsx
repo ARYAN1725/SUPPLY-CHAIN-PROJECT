@@ -32,6 +32,9 @@ const Signup = () => {
         catch(error) {
             alert('An error occured');
             console.log(error);
+            if (error.response) {
+                console.log(error.response.data);
+              }
         }
     };
 
