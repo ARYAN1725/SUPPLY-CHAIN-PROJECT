@@ -8,7 +8,9 @@ app = Flask(__name__)
 
 # Enable CORS from frontend connection
 CORS(app,
-     origins=['http://127.0.0.1:5173'],
+     origins=['http://127.0.0.1:5173',
+              'http://127.0.0.1:5173'
+              ],
      supports_credentials = True)
 
 #Ensure that the database exists
