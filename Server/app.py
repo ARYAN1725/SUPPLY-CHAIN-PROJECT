@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
+from flask_session import Session
 import os
 
 
@@ -22,6 +23,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(db_folder, 'su
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+
+#Session Configuration
+app.secret_key = 'your_super_secret_key'  #Secret key to sign cookies
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_PERMANENT'] = False
+
+Session(app)
 
 #Add import routes * here
 from routes import *
