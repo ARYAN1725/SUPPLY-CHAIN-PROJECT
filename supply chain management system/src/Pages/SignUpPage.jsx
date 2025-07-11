@@ -5,6 +5,11 @@ import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import API from '../api';
 
+function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
 const Signup = () => {
     const [formData, setFormData] = useState({
         username: '',
@@ -24,20 +29,44 @@ const Signup = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+
+        //Frontend Validation
+        if(!formData.username.trim()) {
+            alert("Username cannot be empty");
+            return;
+        }
+
+        if(!validateEmail(formData.email)){
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if(formData.password.length < 6){
+            alert("Password must be atleast 6 characters long!");
+            return;
+        }
+        //Frontend validation ends here. 
+
         try{
             await API.post('/api/UserSignup', formData);
             alert('Registration Successful');
             navigate('/login');
         }
-        catch(error) {
-            alert('An error occured');
+        
+        catch (error) {
+            if (error.response && error.response.data.message) {
+                alert(error.response.data.message);
+            } else {
+                alert("An error occurred.");
+            }
+        
             console.log(error);
+        
             if (error.response) {
                 console.log(error.response.data);
-              }
-              else{
+            } else {
                 console.log(error.message);
-              }
+            }
         }
     };
 

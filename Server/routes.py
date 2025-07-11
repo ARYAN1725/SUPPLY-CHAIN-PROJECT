@@ -8,6 +8,19 @@ from flask import session, jsonify
 @app.route("/api/UserLogin", methods=["POST"])
 def UserLogin():
     data = request.get_json()
+
+    email = data.get("email", "").strip()
+    password = data.get("password", "")
+
+    if not email:
+        return jsonify({"message": "Please enter an email address!"}), 400
+    
+    if "@" not in email:
+        return jsonify({"message": "The email must contain an '@"}), 400
+    
+    if "." not in email:
+        return jsonify({"message": "The email must contian a '."}), 400
+    
     email = data.get("email")
     password = data.get("password")
 
@@ -25,6 +38,36 @@ def UserLogin():
 @app.route("/api/UserSignup", methods=["POST"])
 def UserSignup():
     data = request.get_json()
+
+    username = data.get("username", "").strip()
+    email = data.get("email", "").strip()
+    password = data.get("password", "")
+
+    #Validate username
+    if not username:
+        return jsonify({"message": "Username cannot be empty."}), 400
+    
+    #Validate email
+    if not email:
+        return jsonify({"message": "Please enter an email address!"}), 400
+
+    if "@" not in email:
+        return jsonify({"message": "Invalid email address, email must contain an '@'"}), 400
+    
+    if "." not in email:
+        return jsonify({"message": "Invalid email address, email must contain a '.'"}), 400
+    
+    #Validate password length
+    if len(password) < 6:
+        return jsonify({"message": "Password must be atleast 6 characters long."}), 400
+    
+    #Check for unique email
+    if User.query.filter_by(email=email).first():
+        return jsonify({"message": "Email already registered. Please login."}), 400
+    
+    #Check for unique username
+    if User.query.filter_by(username=username).first():
+        return jsonify({"message": "Username already taken. Please choose another username."}), 400
 
     #Hash the password
     hashed_password = generate_password_hash(data['password'])

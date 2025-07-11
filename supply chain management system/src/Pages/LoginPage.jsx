@@ -5,6 +5,11 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import API from '../api';
 
+function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
 const Login = () =>{
     const [formData, setFormData] = useState({
         email: '',
@@ -23,6 +28,11 @@ const Login = () =>{
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+
+        if (!validateEmail(formData.email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
 
         try{
             const response = await API.post('/api/UserLogin',
