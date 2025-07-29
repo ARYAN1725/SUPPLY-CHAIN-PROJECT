@@ -11,6 +11,7 @@ def UserLogin():
 
     email = data.get("email", "").strip()
     password = data.get("password", "")
+    remember_me = data.get('rememberMe', False)
 
     if not email:
         return jsonify({"message": "Please enter an email address!"}), 400

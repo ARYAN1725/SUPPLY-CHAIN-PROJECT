@@ -27,7 +27,7 @@ db = SQLAlchemy(app)
 #Session Configuration
 app.secret_key = 'your_super_secret_key'  #Secret key to sign cookies
 app.config['SESSION_TYPE'] = 'filesystem'
-app.config['SESSION_PERMANENT'] = False
+app.config['SESSION_PERMANENT_LIFETIME'] = timedelta(days=30)
 
 Session(app)
 

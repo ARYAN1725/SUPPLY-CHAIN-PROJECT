@@ -13,16 +13,17 @@ function validateEmail(email) {
 const Login = () =>{
     const [formData, setFormData] = useState({
         email: '',
-        password: ''
+        password: '',
+        rememberMe: false
     });
 
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { name, value} = e.target;
+        const { name, type, value, checked} = e.target;
         setFormData(prev => ({
             ...prev,
-            [name] : value
+            [name] : type === 'checkbox' ? checked : value
         }));
     }
 
@@ -101,7 +102,13 @@ const Login = () =>{
 
             <div className="RememberForgot">
             <div className="LeftRemember">
-            <input type="checkbox" id="RememberMe" />
+            <input 
+            type="checkbox" 
+            id="RememberMe" 
+            name="rememberMe"
+            checked={formData.rememberMe}
+            onChange={handleChange}
+            />
             <label htmlFor="RememberMe">Remember Me</label>
             </div>
             <a href="#" id="ForgotPassword">Forgot password?</a>
